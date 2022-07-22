@@ -1,0 +1,55 @@
+.fa-bars {
+  color: white;
+  font-size: 25px;
+  text-shadow: 4px 4px 5px #979595;
+  position: absolute;
+  right: 30px;
+  top: 145px;
+  z-index: 200;
+  position: fixed;
+}
+
+.side-bar-menu {
+  background-color: #658b92;
+  box-shadow: 0px 10px 10px #979595;
+}
+
+.side-bar-container ul {
+  list-style: none;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.side-bar-container a {
+  text-decoration: none;
+  color: #fff;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 100px;
+  line-height: 50px;
+}
+
+.side-bar-container a:hover {
+  text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+.side-bar-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 150px;
+  right: 18px;
+  padding: 20px 0px 10px 30px;
+  transform: translateX(1em);
+  z-index: -1;
+  transition: all 0.2s ease-in-out 0.5s;
+  border-radius: 5px;
+}
+
+.side-bar-container:hover .side-bar-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0%);
+  transition-delay: 0s, 0s, 0.5s;
+  z-index: 1;
+}

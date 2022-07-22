@@ -1,0 +1,48 @@
+.header {
+  height: 200px;
+  background-color: rgb(20, 120, 124);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: fixed;
+  z-index: 100;
+}
+.header .icon-container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 55px;
+}
+.logo-name {
+  /* background-color: rgb(20, 120, 124); */
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  /* margin: 0; */
+}
+.child1 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  padding: 1rem;
+  justify-content: space-evenly;
+  text-indent: 0%;
+}
+/* img {
+  padding: 15px 190px 40px 20px;
+} */
+/* h1 {
+  text-indent: 30%;
+  
+  margin-right: 5px;
+}
+
+span {
+  align-items: right;
+} */

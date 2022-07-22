@@ -1,0 +1,20 @@
+.footer {
+  background-color: #27acf4;
+}
+
+.footer-p {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: small;
+  padding: 2px;
+  background-color: rgb(20, 120, 124);
+  /* background-color: #27acf4; */
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
