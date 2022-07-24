@@ -4,6 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import { addUserData, fetchAllInformation } from "../services/userService";
 //import UserInfoList from "./UserInfoList";
 import AuthContext from "../context/AuthContext";
+import { Navigate, useNavigate } from "react-router-dom";
 
 interface Props {
   onAddDetail: (newDetails: Information) => void;
@@ -13,9 +14,10 @@ export default function UserInformation() {
   const { user } = useContext(AuthContext);
   const [information, setInformation] = useState<Information[]>([]);
   const [name, setName] = useState("");
-  const [vaccine, setVaccine] = useState("");
+  const [vaccineName, setVaccineName] = useState("");
   const [doses, setDoses] = useState(0);
   const [submit, setSubmit] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchAllInformation().then((res) => setInformation(res));
@@ -30,10 +32,11 @@ export default function UserInformation() {
           onSubmit={(e) => {
             e.preventDefault();
 
-            addUserData({ name: name, vaccine: vaccine, doses: doses });
+            addUserData({ name: name, vaccine: vaccineName, doses: doses });
             console.log(information);
+
             setName("");
-            setVaccine("");
+            setVaccineName("");
             setDoses(0);
             setSubmit(true);
           }}
@@ -52,7 +55,21 @@ export default function UserInformation() {
             />
           </div>
           <div className="info-input">
-            <label htmlFor="vaccine">Vaccine Name</label>
+            <select
+              className="search-select search-input-vaccine"
+              name="vaccineName"
+              id="vaccineName"
+              value={vaccineName}
+              onChange={(e) => setVaccineName(e.target.value)}
+            >
+              <option value="" disabled hidden>
+                Vaccine
+              </option>
+              <option value="Pfizer">Pfizer</option>
+              <option value="Moderna">Moderna</option>
+              <option value="jansen">Jansen</option>
+            </select>
+            {/* <label htmlFor="vaccine">Vaccine Name</label>
             <input
               className="vaccine"
               type="text"
@@ -64,7 +81,7 @@ export default function UserInformation() {
               }}
               placeholder="pfizer/moderna/Jansen..."
               required
-            />
+            /> */}
             <label htmlFor="doses">Doses</label>
             <input
               className="doses"

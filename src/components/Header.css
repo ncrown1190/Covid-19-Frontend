@@ -29,10 +29,11 @@
 }
 .child1 {
   display: inline-block;
-  vertical-align: text-bottom;
+  /* vertical-align: text-bottom; */
   padding: 1rem;
-  justify-content: space-evenly;
-  text-indent: 0%;
+  /* justify-content: space-evenly; */
+  /* text-indent: 0%; */
+  text-align: right;
 }
 /* img {
   padding: 15px 190px 40px 20px;

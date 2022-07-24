@@ -9,6 +9,7 @@ export default function NavPage() {
     <div>
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
+
         <Route path="/city/state" element={<SearchLocation />} />
 
         <Route path="/zipcode" element={<SearchByZip />} />
