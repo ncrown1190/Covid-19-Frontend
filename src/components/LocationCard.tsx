@@ -9,7 +9,7 @@ export default function LocationCard({ singleLocationCard }: Props) {
   return (
     <div className="single-div">
       <div className="">
-        <h2>{singleLocationCard.loc_name}</h2>
+        <h2 className="pharmacyName">{singleLocationCard.loc_name}</h2>
         <h6 className="phone">
           <a href="tel:+1{singleLocationCard.loc_phone}">
             Call: {singleLocationCard.loc_phone}
@@ -49,7 +49,9 @@ export default function LocationCard({ singleLocationCard }: Props) {
 
         {/* <p>{singleLocationCard.in_stock}</p> */}
 
-        <h5>Last Updated: {singleLocationCard.quantity_last_updated}</h5>
+        <h5 className="lastUpdated">
+          Last Updated: {singleLocationCard.quantity_last_updated}
+        </h5>
       </div>
     </div>
   );

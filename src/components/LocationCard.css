@@ -1,6 +1,6 @@
 .single-div {
   /* width: 320px; */
-  height: 330px;
+  height: 360px;
   margin-right: 0px;
 
   margin-top: 60px;
@@ -23,5 +23,13 @@
 .single-div .vaccine-name {
   color: #8e2323;
   font-weight: bolder;
-  font-size: medium;
+  font-size: 1.35em;
+}
+
+.pharmacyName {
+  font-size: xx-large;
+}
+
+.lastUpdated {
+  font-size: large;
 }

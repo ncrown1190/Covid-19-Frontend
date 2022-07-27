@@ -13,3 +13,20 @@
 .hide {
   display: none;
 } */
+.someTagline {
+  /* display: inline-block; */
+  text-align: left;
+  padding: 15px 10px 10px 50px;
+  margin-top: 200px;
+  font-size: x-large;
+  font-weight: 600;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  line-height: 22px;
+}
+/* .something {
+  font-size: medium;
+  font-weight: 700;
+} */

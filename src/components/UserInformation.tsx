@@ -17,6 +17,7 @@ export default function UserInformation() {
   const [vaccineName, setVaccineName] = useState("");
   const [doses, setDoses] = useState(0);
   const [submit, setSubmit] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,7 +44,9 @@ export default function UserInformation() {
         >
           <h2>Please fill this Form</h2>
           <div className="info-input">
-            <label htmlFor="name">Name</label>
+            <label id="label" htmlFor="name">
+              Name
+            </label>
             <input
               className="name"
               type="text"
@@ -82,7 +85,9 @@ export default function UserInformation() {
               placeholder="pfizer/moderna/Jansen..."
               required
             /> */}
-            <label htmlFor="doses">Doses</label>
+            <label id="label" htmlFor="doses">
+              Doses
+            </label>
             <input
               className="doses"
               type="number"

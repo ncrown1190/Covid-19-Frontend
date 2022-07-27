@@ -30,6 +30,7 @@ export default function Home() {
         {user ? (
           <div>
             <h2>welcome, {user.displayName?.toLowerCase()}</h2>
+
             <UserInformation />
           </div>
         ) : (
