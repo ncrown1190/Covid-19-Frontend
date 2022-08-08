@@ -46,9 +46,9 @@ export default function LocationCard({ singleLocationCard }: Props) {
           Insurance Accepted:{" "}
           {singleLocationCard.insurance_accepted ? "true" : "false"}
         </p>
-        <p>
+        {/* <p>
           Walkins Accepted: {singleLocationCard.walkins_accepted.toString()}
-        </p>
+        </p> */}
 
         <h5 className="vaccine-name">Vaccine: {singleLocationCard.med_name}</h5>
 
