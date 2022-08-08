@@ -54,7 +54,7 @@
     grid-template-columns: auto auto;
   }
   .single-div {
-    height: 400px;
+    height: 500px;
   }
   .child1 {
     font-size: xx-large;
@@ -65,6 +65,6 @@
     grid-template-columns: auto auto auto;
   }
   .single-div {
-    height: 400px;
+    height: 535px;
   }
 }

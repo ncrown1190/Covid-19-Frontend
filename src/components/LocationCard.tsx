@@ -42,12 +42,18 @@ export default function LocationCard({ singleLocationCard }: Props) {
             Visit Pharmacy for further details
           </a>
         </p>
-        {/* <p>{singleLocationCard.insurance_accepted}</p>
-        <p>{singleLocationCard.walkins_accepted}</p> */}
+        <p>
+          Insurance Accepted:{" "}
+          {singleLocationCard.insurance_accepted ? "true" : "false"}
+        </p>
+        <p>
+          Walkins Accepted: {singleLocationCard.walkins_accepted.toString()}
+        </p>
 
         <h5 className="vaccine-name">Vaccine: {singleLocationCard.med_name}</h5>
 
-        {/* <p>{singleLocationCard.in_stock}</p> */}
+        {/* <p>{string(singleLocationCard.in_stock)}</p> */}
+        <p>InStock: {singleLocationCard.in_stock.toString()}</p>
 
         <h5 className="lastUpdated">
           Last Updated: {singleLocationCard.quantity_last_updated}
