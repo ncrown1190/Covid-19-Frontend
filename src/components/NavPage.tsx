@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import SearchByVaccine from "./SearchByVaccine";
 import SearchByZip from "./SearchByZip";
@@ -14,6 +14,7 @@ export default function NavPage() {
 
         <Route path="/zipcode" element={<SearchByZip />} />
         <Route path="/vaccine" element={<SearchByVaccine />} />
+        <Route path="*" element={<Navigate to="/zipcode" />} />
       </Routes>
     </div>
   );

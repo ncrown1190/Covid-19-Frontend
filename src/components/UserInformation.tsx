@@ -17,12 +17,18 @@ export default function UserInformation() {
   const [vaccineName, setVaccineName] = useState("");
   const [doses, setDoses] = useState(0);
   const [submit, setSubmit] = useState(false);
+  //const [showForm, setShowForm] = useState(false);
 
   const navigate = useNavigate();
 
   useEffect(() => {
     fetchAllInformation().then((res) => setInformation(res));
   }, []);
+
+  // const formChecked = () => {
+  //   if (showForm) setShowForm(false);
+  //   if (!showForm) setShowForm(true);
+  // };
 
   return (
     <div className="user-info">
@@ -99,6 +105,7 @@ export default function UserInformation() {
             />
           </div>
           <input className="btn" type="submit" value="SUBMIT" />
+          {/* {showForm ? <UserInformation /> : null} */}
           {/* <button>SKIP</button> */}
 
           {/* {user ? (
