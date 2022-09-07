@@ -13,12 +13,13 @@ interface Props {
 
 export default function UserInformation() {
   const { user } = useContext(AuthContext);
+  const { profile } = useContext(AuthContext);
   const [information, setInformation] = useState<Information[]>([]);
   const [name, setName] = useState("");
   const [vaccineName, setVaccineName] = useState("");
   const [doses, setDoses] = useState(0);
   const [submit, setSubmit] = useState(false);
-  const [profile, setProfile] = useState<Profile | null>(null);
+  //const [profile, setProfile] = useState<Profile | null>(null);
 
   const navigate = useNavigate();
 
