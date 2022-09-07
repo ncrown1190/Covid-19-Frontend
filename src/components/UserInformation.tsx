@@ -5,6 +5,7 @@ import { addUserData, fetchAllInformation } from "../services/userService";
 //import UserInfoList from "./UserInfoList";
 import AuthContext from "../context/AuthContext";
 import { Navigate, useNavigate } from "react-router-dom";
+import Profile from "../models/Profile";
 
 interface Props {
   onAddDetail: (newDetails: Information) => void;
@@ -17,7 +18,7 @@ export default function UserInformation() {
   const [vaccineName, setVaccineName] = useState("");
   const [doses, setDoses] = useState(0);
   const [submit, setSubmit] = useState(false);
-  //const [showForm, setShowForm] = useState(false);
+  const [profile, setProfile] = useState<Profile | null>(null);
 
   const navigate = useNavigate();
 
@@ -33,7 +34,8 @@ export default function UserInformation() {
   return (
     <div className="user-info">
       {/* <UserInfoList information={information} /> */}
-      {submit || (
+      {/* {submit || ( */}
+      {(user && !profile && submit) || (
         <form
           action="/Nazima"
           onSubmit={(e) => {
