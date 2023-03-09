@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To Create Interface
+https://jvilk.com/MakeTypes/ 
+1. Visit the link above
+2. Copy the entire json object
+3. and paste it and convert
+
 ## Available Scripts
 
 In the project directory, you can run:
